@@ -5,6 +5,8 @@ Flight Data Recorder for Microsoft Flight Simulator 2020
 
 The Flight Data Recorder enables you to record, save and replay flights in Microsoft Flight Simulator 2020 ©. It is a standalone application that opens in its own window and uses the SimConnect API to communicate with the flight simulator.
 
+Preview video https://www.youtube.com/watch?v=yjAz1RRzy9E
+
 ## Installation & Start
 
 Flight Data Recorder is a standalone application. Just unzip the zip file to a folder of your choice.
