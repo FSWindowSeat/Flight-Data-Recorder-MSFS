@@ -29,3 +29,14 @@ Please ensure that you're using the same aircraft and that your aircraft is at t
 The Flight Data Recorder records flight data at the sim's speed. Hence, if you record your flight at, e.g. 20, FPS you will notice some stutter at times during the replay. There's no functionality included to interpolate lower resolution data for higher FPS.  
 
 The fast forward and rewind speeds are limited to 16x. Although it'd be possible to forward/rewind a recording at higher speeds it turned out to be unstable and might crash the sim, as it cannot keep up with loading the scenery.
+
+## License
+
+Flight Data Recorder for MS FS2020
+Copyright (C) 2021 FSWindowSeat <muppetlabs@fswindowseat.com>
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
