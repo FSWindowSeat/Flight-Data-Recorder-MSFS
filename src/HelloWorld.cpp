@@ -1,7 +1,6 @@
 #include <iostream>
 
-// A comment
+// Hello world
 int main() {
-	// Another comment
 	std::cout << "Hello World!" << std::endl;
 }
