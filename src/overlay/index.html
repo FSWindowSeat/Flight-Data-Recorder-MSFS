@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FTDIS Flight Data Display</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKGZf_FYmOHZOQ9WSs-RlMrwkiYrTATg0&callback=initMap&libraries=&v=weekly"
+    defer></script>
+  <script src="map.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="flightDataDisplay">
+
+    <div id="mapOverlay"></div>
+
+    <div id="dataOverlayTop">
+      <div id="dataOverlayTimeTo">
+        <div id="labelTimeTo" class="dataLabelTop">Time to</div>
+        <div id="valueTimeTo" class="dataValueTop"></div>
+      </div>
+      <div id="dataArrivalTime">
+        <div id="labelTimeAt" class="dataLabelTop">Time of Arrival</div>
+        <div id="valueTimeAt" class="dataValueTop"></div>
+      </div>
+    </div>
+
+    <div id="dataOverlayBottom">
+      <div id="dataDistTraveled">
+        <div id="labelDistTraveled" class="dataLabelBottom">Distance Traveled</div>
+        <div id="valueDistTraveled" class="dataValueBottom"></div>
+      </div>
+      <div id="fltData">
+        <div id="labelFltData" class="dataLabelBottom">Altitude</div>
+        <div id="valueFltData" class="dataValueBottom"></div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </div>
+</body>
+</html>

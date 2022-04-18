@@ -1,0 +1,26 @@
+// note that the icon used by the Explorer (i.e. the programs icon) is the
+// first icon in the executable and the icons are sorted both by their order
+// and alphabetically (!), so put this icon first and give it a name
+// starting with "a"
+aaaaaaaa ICON "../data/FDR.ico"
+
+// Define icons
+FDRIcon ICON "../data/FDR.ico"
+ButtonRewind RCDATA "../data/ButtonRewind.png"
+ButtonRewindActive RCDATA "../data/ButtonRewindActive.png"
+ButtonForward RCDATA "../data/ButtonForward.png"
+ButtonForwardActive RCDATA "../data/ButtonForwardActive.png"
+ButtonPlay RCDATA "../data/ButtonPlay.png"
+ButtonPlayActive RCDATA "../data/ButtonPlayActive.png"
+ButtonPause RCDATA "../data/ButtonPause.png"
+ButtonPauseActive RCDATA "../data/ButtonPauseActive.png"
+ButtonStop RCDATA "../data/ButtonStop.png"
+ButtonStopActive RCDATA "../data/ButtonStopActive.png"
+ButtonRecord RCDATA "../data/ButtonRecord.png"
+ButtonRecordActive RCDATA "../data/ButtonRecordActive.png"
+ButtonRecording RCDATA "../data/ButtonRecording.png"
+
+// Define help file(s)
+//HelpFile RCDATA "../../data/FlightDataRecorder.chm"
+
+#define wxUSE_NO_MANIFEST 0

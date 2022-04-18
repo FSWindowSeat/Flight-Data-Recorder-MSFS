@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{a493602a-94ec-4730-9210-ef8709ea5b2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\fmod">
+      <UniqueIdentifier>{b1bd8c77-95a1-4f67-83cf-c18aae381ccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\sqlite">
+      <UniqueIdentifier>{326803ce-9bdd-4f6c-844a-baef07e65c20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib\cpprest">
+      <UniqueIdentifier>{e48ca1cc-6768-4710-b320-bbed8c699012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{957e57d8-9d6f-4967-9ba9-3ce59f30c205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Overlay">
+      <UniqueIdentifier>{d328a37d-fff9-4059-beb0-baae588efcd2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gui\CamShake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\CoprocessorFDR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\CoprocessorFTDIS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\FDRFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\FTDISFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GuiApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GuiMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GuiOptionsDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GuiOverlayDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GuiTrafficDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Processor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ProcessorCom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\ProcessorUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimBBA332.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimBBA343.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimFSA320.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimFSB787.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimModelBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimPAA388.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimplexNoise.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\SimSoundEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\Track.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gui\CamShake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\CamShakeStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\CoprocessorFDR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\CoprocessorFTDIS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\FDRFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\FDRFileStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\FTDISFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\FTDISFileStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GuiApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GuiMain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GuiOptionsDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GuiOverlayDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\GuiTrafficDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\OptionsStruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\PosDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Processor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ProcessorCom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\ProcessorUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\SimDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\SimModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\SimplexNoise.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\SimSoundEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\SysDataSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\Track.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+    <None Include="src\overlay\index.html">
+      <Filter>Overlay</Filter>
+    </None>
+    <None Include="src\overlay\map.js">
+      <Filter>Overlay</Filter>
+    </None>
+    <None Include="src\overlay\style.css">
+      <Filter>Overlay</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="data\FDR.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\ButtonForward.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonForwardActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonPause.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonPauseActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonPlay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonPlayActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonRecord.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonRecordActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonRecording.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonRewind.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonRewindActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonStop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\ButtonStopActive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\FDR.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="lib\fmod\lib\fmod.dll">
+      <Filter>Lib\fmod</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\fmod\lib\fmodstudio.dll">
+      <Filter>Lib\fmod</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\fmod\lib\fsbank.dll">
+      <Filter>Lib\fmod</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\sqlite\lib\sqlite3.dll">
+      <Filter>Lib\sqlite</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\cpprest\lib\cpprest143_2_10.dll">
+      <Filter>Lib\cpprest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\cpprest\lib\cpprest143_2_10d.dll">
+      <Filter>Lib\cpprest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\cpprest\lib\zlib1.dll">
+      <Filter>Lib\cpprest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="lib\cpprest\lib\zlibd1.dll">
+      <Filter>Lib\cpprest</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\config.db">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\FlightDataRecorder.chm">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\B781.strings.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\A320NX.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\A320NX.strings.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\A332RR.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\A332RR.strings.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\A388.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\A388.strings.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="data\B781.bank">
+      <Filter>Data</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\Google_API_Key.txt">
+      <Filter>Data</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -26,13 +26,13 @@
 *.a
 *.lib
 
+# Project Specific files
+*.bank
+Google_API_Key.txt
+
 # Executables
 *.exe
 *.out
 *.app
-*.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
 /.vs
 /bin
