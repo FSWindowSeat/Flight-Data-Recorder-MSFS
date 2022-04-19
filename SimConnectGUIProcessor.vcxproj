@@ -391,6 +391,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)overlay" MKDIR mkdir "$(TargetDir)overlay"
+xcopy "$(ProjectDir)src\overlay\*.*" "$(TargetDir)overlay" /D /Y
 </Command>
       <Message>Post-Build events</Message>
     </PostBuildEvent>
@@ -416,6 +417,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)overlay" MKDIR mkdir "$(TargetDir)overlay"
+xcopy "$(ProjectDir)src\overlay\*.*" "$(TargetDir)overlay" /D /Y
 </Command>
       <Message>Post-Build events</Message>
     </PostBuildEvent>
@@ -437,6 +439,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)overlay" MKDIR mkdir "$(TargetDir)overlay"
+xcopy "$(ProjectDir)src\overlay\*.*" "$(TargetDir)overlay" /D /Y
 </Command>
       <Message>Post-Build events</Message>
     </PostBuildEvent>
@@ -462,6 +465,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(TargetDir)overlay" MKDIR mkdir "$(TargetDir)overlay"
+xcopy "$(ProjectDir)src\overlay\*.*" "$(TargetDir)overlay" /D /Y
 </Command>
       <Message>Post-Build events</Message>
     </PostBuildEvent>
