@@ -31,7 +31,7 @@ private:
 	bool simConnect = false;
 	float replayRate = 0.0F;
 	std::mutex m;
-	OptionsStruct options = {320,false,false,false,0,0,0,0,"",0,0,0,0};
+	OptionsStruct options = {320,false,false,false,false,0,0,0,0,"",0,0,0,0};
 
 public:
 	
@@ -61,6 +61,8 @@ public:
 	
 	bool GetBeepStartEnd();
 	
+	bool GetCamShake();
+
 	int GetDepHH();
 	
 	int GetDepMM();

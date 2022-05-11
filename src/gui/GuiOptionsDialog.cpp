@@ -19,9 +19,6 @@ GuiOptionsDialog::GuiOptionsDialog(GuiMain* guiMain, ProcessorCom* com) : wxDial
     this->guiMain = guiMain;
     this->cpuCom = com;
 
-    // Load Config from DB
-    this->LoadOptionsDialogConfig();
-
     // Define UI
     wxPanel* panel = new wxPanel(this, -1);
     panel->SetBackgroundColour(wxColour(69, 69, 69));
@@ -57,6 +54,9 @@ GuiOptionsDialog::GuiOptionsDialog(GuiMain* guiMain, ProcessorCom* com) : wxDial
     wxButton* saveButton = new wxButton(panel, wxID_SAVE, wxT("Save"), wxPoint(140, 187), wxSize(70, 30));
     saveButton->SetBackgroundColour(wxColour(48, 48, 48));
     saveButton->SetForegroundColour(wxColour(221, 221, 221));
+
+    // Load Config from DB and set UI flags
+    this->LoadOptionsDialogConfig();
 }
 
 
@@ -70,6 +70,7 @@ void GuiOptionsDialog::ButtonSaveOptions(wxCommandEvent& evt) {
     options.halfRate = cbHalfRate->GetValue();
     options.customSound = cbCustSound->GetValue();
     options.beepStartEnd = cbBeebSound->GetValue();
+    options.camShake = cbCamShake->GetValue();
     cpuCom->SetOptions(options);
 
     this->SaveOptionsDialogConfig();
@@ -85,6 +86,7 @@ void GuiOptionsDialog::LoadOptionsDialogConfig() {
     sqlite3* dbCon = nullptr;
     sqlite3_stmt* stmt = nullptr;
     std::string appPathFile = this->guiMain->GetExePathUTF8() + "config.db";
+    OptionsStruct options = cpuCom->GetOptions();
 
     if (sqlite3_open(appPathFile.c_str(), &dbCon) == SQLITE_OK) {
 
@@ -129,17 +131,33 @@ void GuiOptionsDialog::LoadOptionsDialogConfig() {
         sqlite3_close(dbCon);
     }
 
-    // Update values in GUI
-    if(selectSimApi != nullptr)
+    // Update values in GUI and save options to processor com
+    if(selectSimApi != nullptr) {
         selectSimApi->SetValue(wxString::Format(wxT("%i"), defApi));
-    if(cbHalfRate != nullptr)
+        options.simApi = wxAtoi(selectSimApi->GetValue());
+    }
+    
+    if (cbHalfRate != nullptr) {
         cbHalfRate->SetValue(halfRate);
-    if(cbCustSound != nullptr)
+        options.halfRate = cbHalfRate->GetValue();
+    }
+    
+    if (cbCustSound != nullptr) {
         cbCustSound->SetValue(custSound);
-    if(cbBeebSound != nullptr)
+        options.customSound = cbCustSound->GetValue();
+    }
+    
+    if (cbBeebSound != nullptr) {
         cbBeebSound->SetValue(notification);
-    if(cbCamShake != nullptr)
+        options.beepStartEnd = cbBeebSound->GetValue();
+    }
+
+    if (cbCamShake != nullptr) {
         cbCamShake->SetValue(camShake);
+        options.camShake = cbCamShake->GetValue();
+    }
+
+    cpuCom->SetOptions(options);
 }
 
 
@@ -190,6 +208,6 @@ void GuiOptionsDialog::SaveOptionsDialogConfig() {
         // Close connection
         sqlite3_finalize(stmt);
         sqlite3_close(dbCon);
-        cbBeebSound->SetValue(notification);
+
     }
 }

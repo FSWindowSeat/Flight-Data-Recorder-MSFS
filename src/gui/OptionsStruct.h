@@ -9,6 +9,7 @@ struct OptionsStruct
 	bool halfRate;
 	bool customSound;
 	bool beepStartEnd;
+	bool camShake;
 	int depHH;
 	int depMM;
 	int depGMTHH;

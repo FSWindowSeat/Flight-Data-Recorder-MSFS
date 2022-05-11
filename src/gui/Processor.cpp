@@ -17,7 +17,7 @@ Processor::Processor(GuiMain* handler, ProcessorCom* com, vector<Track*> tracks)
 	this->headCam = new CamShake(handler);
 
 	// ----------------------------------------------------------------------------------
-	// TODO
+	// @todo Review and rework
 	// ----------------------------------------------------------------------------------
 	// Update flight time in case of continuation of existing recording
 	//if (fdrFile->GetSize() > 0)
@@ -45,7 +45,7 @@ Processor::Processor(GuiMain *handler, ProcessorCom *com, FTDISFile *file) : wxT
 
 Processor::~Processor() {
 	
-	// Close coprocessors
+	// Close co-processors
 	for (auto& cpu : cpusFDR)
 		delete cpu;
 	cpusFDR.clear();
@@ -272,22 +272,22 @@ void Processor::DispatchProc(SIMCONNECT_RECV* pData, DWORD cbData) {
 							}
 							
 							// Camera head shake processing for main/user track
-							if(tracks.at(0)->GetTrackType() == Track::TrackType::USER){
+							if(cpuCom->GetCamShake() && tracks.at(0)->GetTrackType() == Track::TrackType::USER){
 								// Prepare camera data set
-								this->headCamData.thr = this->fdrRecords[0].thr1;
-								this->headCamData.flaps = this->flapsTrailingPrc[0];
-								this->headCamData.splr = this->fdrRecords[0].splr;
-								this->headCamData.gearPos = this->fdrRecords[0].gearPos;
-								this->headCamData.absGroundAlt = this->absAltGround[0];
+								this->headCamData.thr = (float) this->fdrRecords[0].thr1;
+								this->headCamData.flaps = (float) this->flapsTrailingPrc[0];
+								this->headCamData.splr = (float) this->fdrRecords[0].splr;
+								this->headCamData.gearPos = (float) this->fdrRecords[0].gearPos;
+								this->headCamData.absGroundAlt = (float) this->absAltGround[0];
+								this->headCamData.spd = (float) this->fdrRecords[0].spd;
+								this->headCamData.simReplayRate = this->cpuCom->GetReplayRate();
 
-								// Update camera position
+								// Update camera position via mouse input
 								headCam->SetCameraPos(this->headCamData, camX, camY, camZ);
 								
-								/* 
-								@note As of SDK 0.16.0 Camera Events are not(!) supported
-								this->hr = SimConnect_TransmitClientEvent(hSimConnect, SIMCONNECT_OBJECT_ID_USER, KEY_AXIS_PAN_PITCH, (DWORD)camX, SIMCONNECT_GROUP_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG_GROUPID_IS_PRIORITY);
-								this->hr = SimConnect_TransmitClientEvent(hSimConnect, SIMCONNECT_OBJECT_ID_USER, KEY_AXIS_PAN_HEADING, (DWORD)camY, SIMCONNECT_GROUP_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG_GROUPID_IS_PRIORITY);
-								*/
+								// @note As of SDK 0.16.0 Camera Events are not(!) supported
+								// this->hr = SimConnect_TransmitClientEvent(hSimConnect, SIMCONNECT_OBJECT_ID_USER, KEY_AXIS_PAN_PITCH, (DWORD)camX, SIMCONNECT_GROUP_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG_GROUPID_IS_PRIORITY);
+								// this->hr = SimConnect_TransmitClientEvent(hSimConnect, SIMCONNECT_OBJECT_ID_USER, KEY_AXIS_PAN_HEADING, (DWORD)camY, SIMCONNECT_GROUP_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG_GROUPID_IS_PRIORITY);
 							}
 
 							break;
@@ -365,11 +365,12 @@ bool Processor::InitSimConnect() {
 		this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, KEY_SIM_RATE_INCR, "SIM_RATE_INCR");
 
 		// Map camera controls
-		this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_PAN_PITCH, "AXIS_PAN_PITCH");
-		this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_PAN_HEADING, "AXIS_PAN_HEADING");
-		this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_PAN_TILT, "AXIS_PAN_TILT");
-		this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_ZOOM_IN_FINE, "ZOOM_IN_FINE");
-		this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_ZOOM_OUT_FINE, "ZOOM_OUT_FINE");
+		// @note As of SDK 0.16.0 Camera Events are not(!) supported
+		// this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_PAN_PITCH, "AXIS_PAN_PITCH");
+		// this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_PAN_HEADING, "AXIS_PAN_HEADING");
+		// this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_PAN_TILT, "AXIS_PAN_TILT");
+		// this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_ZOOM_IN_FINE, "ZOOM_IN_FINE");
+		// this->hr = SimConnect_MapClientEventToSimEvent(hSimConnect, (UINT) KEY_AXIS_ZOOM_OUT_FINE, "ZOOM_OUT_FINE");
 
 		// Set progress flags
 		cpuCom->SetSimConnect(true);

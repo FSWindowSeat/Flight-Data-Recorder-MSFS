@@ -78,6 +78,7 @@ void ProcessorCom::SetOptions(OptionsStruct newOptions) {
 	this->options.halfRate = newOptions.halfRate;
 	this->options.customSound = newOptions.customSound;
 	this->options.beepStartEnd = newOptions.beepStartEnd;
+	this->options.camShake = newOptions.camShake;
 	this->options.depHH = newOptions.depHH;
 	this->options.depMM = newOptions.depMM;
 	this->options.depGMTHH = newOptions.depGMTHH;
@@ -112,6 +113,11 @@ bool ProcessorCom::GetCustomSound() {
 bool ProcessorCom::GetBeepStartEnd() {
 	std::lock_guard<std::mutex> lockGuard(m);
 	return this->options.beepStartEnd;
+}
+
+bool ProcessorCom::GetCamShake() {
+	std::lock_guard<std::mutex> lockGuard(m);
+	return this->options.camShake;
 }
 
 int ProcessorCom::GetDepHH() {

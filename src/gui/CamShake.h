@@ -59,7 +59,7 @@ private:
         float y = 0.0f;
         float z = 0.0f;
     };
-    Position camLimit, camFreq, camAmpl, camPos, camMov, camPixelScale;
+    Position camLimit, camFreq, camAmpl, camPos, camMov, simplNoise;
     
     enum camShakeVarsId {
 		limitId = 1,
@@ -71,8 +71,9 @@ private:
     HWND window;
     RECT winPos;
     SimplexNoise camShakeX, camShakeY, camShakeZ;
-    float camLastUpdateT = 0.0f, camUpdateCycleT = 0.0f, camScaleLastUpdateT = 0.0f;
-    bool initCam = false;
+    float camLastUpdateT = 0.0f, camUpdateCycleT = 0.0f;
+    bool initCam = false, mouseCtrButton = false;
+    int winHeight, winWidth;
     
     /**
     * Load camera shake configuration from config database
@@ -83,11 +84,24 @@ private:
 
     /**
     * Use native Windows API to provide mouse input to 
-    * MSFS 2020 main application window
+    * an application window
     * 
-    * @param[in]    winPos      MSFS 2020 main application window area rectangle
-    * @param[in]    mousePos    X/Y/Z movement in pixel (Z axis to be used for zoom, but isn't used at the moment)
+    * @param[in]    winPos      Application window area rectangle
+    * @param[in]    mousePos    X/Y movement in percent of screen height/width. Z axis mouse wheel movement (+ forward / - backward). One wheel click is defined as 120.
     */ 
     void moveMouse(RECT winPos, Position mousePos);
+    void resetMouse();
+
+    /**
+     * Use native Windows API to provide keyboard input to 
+     * an application window
+     * 
+     * @param threadID  Application window's thread id
+     * @param mK        Keyboard char
+     */
+    void pressKey(DWORD threadID, char mK);
 };
 #endif
+
+
+

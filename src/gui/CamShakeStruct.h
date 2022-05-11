@@ -3,13 +3,15 @@
 
 struct CamShakeStruct
 {
-	double fltTime;
-	double thr;
-    double flaps;
-	double splr;
-	double gearPos;
-    double absGroundAlt;
-    double simCamPosX;
-    double simCamPosY;
+	float fltTime;
+	float thr;
+    float flaps;
+	float splr;
+	float gearPos;
+    float absGroundAlt;
+	float spd;
+    float simCamPosX;
+    float simCamPosY;
+	float simReplayRate;
 };
 #endif
